@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace PRWebAPI.Controllers
 {
-    [Authorize(Roles = "Admin")]
+  //  [Authorize(Roles = "Admin")]
     [Route("api/[controller]")]
     [ApiController]
     public class InteratctionController : ControllerBase
@@ -24,7 +24,7 @@ namespace PRWebAPI.Controllers
             _dbContext = dbContext;
         }
 
-        [Authorize]
+
         [HttpGet("GetInteratctionDetails")]
         public async Task<ActionResult<IEnumerable<InteractionDetails>>> GetInteratctionDetails()
         {
@@ -47,7 +47,7 @@ namespace PRWebAPI.Controllers
             return Ok(objInteraction);
         }
 
-        [Authorize]
+
         [HttpPost("PostInteratctionDetails")]
         public async Task<ActionResult<ContactDTO>> PostInteratctionDetailsDetails(InteractionDTO objInteraction)
         {
@@ -57,11 +57,11 @@ namespace PRWebAPI.Controllers
             }
             _dbContext.tblInteractionDetails.Add(new InteractionDetails
             {
-                InteractionDate = objInteraction.InteractionDate,
-                PatronName = objInteraction.PatronName,
-                MeetingDate = objInteraction.MeetingDate,
+                InteractionDate = DateTime.Now.Date,
+                MeetingDate = DateTime.Now.Date,
                 Reason = objInteraction.Reason,
-                Comment = objInteraction.Comment               
+                Comment = objInteraction.Comment,
+                ContactDetailsID = objInteraction.ContactDetailsID
             });
             await _dbContext.SaveChangesAsync();
             return CreatedAtAction(nameof(PostInteratctionDetailsDetails), new { InteractionDate = objInteraction.InteractionDate }, objInteraction);

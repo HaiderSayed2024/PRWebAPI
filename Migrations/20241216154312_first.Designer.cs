@@ -12,8 +12,8 @@ using PRWebAPI.Models;
 namespace PRWebAPI.Migrations
 {
     [DbContext(typeof(PRContext))]
-    [Migration("20241108155713_AddedRoles")]
-    partial class AddedRoles
+    [Migration("20241216154312_first")]
+    partial class first
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -54,21 +54,21 @@ namespace PRWebAPI.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "a1bba028-b4e3-4312-95be-c50c09c2f795",
+                            Id = "1ab0bf34-2901-4efb-9836-2e76cb4dcf2a",
                             ConcurrencyStamp = "1",
                             Name = "Admin",
                             NormalizedName = "Admin"
                         },
                         new
                         {
-                            Id = "4e1f9d44-c2d5-4670-9d38-0309449061df",
+                            Id = "f9dfa0c7-3b3f-4f24-81cf-074348325e9f",
                             ConcurrencyStamp = "1",
                             Name = "Admin",
                             NormalizedName = "User"
                         },
                         new
                         {
-                            Id = "3dd0ba8b-80c1-45f5-b3eb-6fe8ded39ff7",
+                            Id = "e9f15bdc-b223-402b-adac-f077cb76bcc8",
                             ConcurrencyStamp = "1",
                             Name = "Admin",
                             NormalizedName = "HR"
@@ -248,11 +248,11 @@ namespace PRWebAPI.Migrations
 
             modelBuilder.Entity("PRWebAPI.Models.ContactDetails", b =>
                 {
-                    b.Property<int>("ID")
+                    b.Property<int>("ContactDetailsID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ContactDetailsID"));
 
                     b.Property<string>("Address")
                         .IsRequired()
@@ -297,7 +297,7 @@ namespace PRWebAPI.Migrations
                     b.Property<string>("Status")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("ID");
+                    b.HasKey("ContactDetailsID");
 
                     b.ToTable("tblContactDetails");
                 });
@@ -314,21 +314,22 @@ namespace PRWebAPI.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("ContactDetailsID")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("InteractionDate")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime>("MeetingDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("PatronName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Reason")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
+
+                    b.HasIndex("ContactDetailsID");
 
                     b.ToTable("tblInteractionDetails");
                 });
@@ -424,6 +425,22 @@ namespace PRWebAPI.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("PRWebAPI.Models.InteractionDetails", b =>
+                {
+                    b.HasOne("PRWebAPI.Models.ContactDetails", "ContactDetails")
+                        .WithMany("InteractionDetails")
+                        .HasForeignKey("ContactDetailsID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ContactDetails");
+                });
+
+            modelBuilder.Entity("PRWebAPI.Models.ContactDetails", b =>
+                {
+                    b.Navigation("InteractionDetails");
                 });
 #pragma warning restore 612, 618
         }

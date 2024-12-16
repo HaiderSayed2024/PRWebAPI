@@ -14,7 +14,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace PRWebAPI.Controllers
 {
-    [Authorize]
+
     [Route("api/[controller]")]
     [ApiController]
     public class ContactController : ControllerBase
@@ -40,7 +40,7 @@ namespace PRWebAPI.Controllers
         [HttpGet("GetContactDetailsById{id}")]
         public ActionResult<ContactDetails> GetContactDetailsById(int id)
         {
-            var objContact = _dbContext.tblContactDetails.FirstOrDefault(x => x.ID == id);
+            var objContact = _dbContext.tblContactDetails.FirstOrDefault(x => x.ContactDetailsID == id);
             if (objContact == null)
             {
                 return BadRequest("User does not exists.");
@@ -51,7 +51,7 @@ namespace PRWebAPI.Controllers
             }
         }
 
-        [Authorize]
+
         [HttpPost("PostContactDetails")]
         public async Task<ActionResult<ContactDTO>> PostContactDetails(ContactDTO objContact)
         {
@@ -72,7 +72,9 @@ namespace PRWebAPI.Controllers
                     Relation = objContact.Relation,
                     ContactAddedBy = objContact.ContactAddedBy,
                     ContactOwnership = objContact.ContactOwnership,
-                    Status = objContact.Status
+                    Status = objContact.Status,
+                    CreatedDate = DateTime.Now.Date,
+                    ModifiedDate = DateTime.Now.Date
                 });
 
                 await _dbContext.SaveChangesAsync();
@@ -85,7 +87,7 @@ namespace PRWebAPI.Controllers
         [HttpPut("PutContactDetails")]
         public async Task<ActionResult> PutContactDetails(int id, ContactDetails objContact)
         {
-            if(id != objContact.ID)
+            if(id != objContact.ContactDetailsID)
             {
                 return BadRequest();
             }
