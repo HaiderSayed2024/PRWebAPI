@@ -257,6 +257,32 @@
   },
   {
     "ContainingType": "PRWebAPI.Controllers.InteratctionController",
+    "Method": "GetInteratctionDetailsByContactID",
+    "RelativePath": "api/Interatction/GetInteratctionDetailsByContactID",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[PRWebAPI.Models.InteractionDetails, PRWebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PRWebAPI.Controllers.InteratctionController",
     "Method": "GetInteratctionDetailsByID",
     "RelativePath": "api/Interatction/GetInteratctionDetailsByID",
     "HttpMethod": "GET",

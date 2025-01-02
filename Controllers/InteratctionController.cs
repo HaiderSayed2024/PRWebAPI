@@ -106,5 +106,21 @@ namespace PRWebAPI.Controllers
             return Ok(objInteraction);
         }
 
+
+        [HttpGet("GetInteratctionDetailsByContactID")]
+        public async Task<ActionResult<IEnumerable<InteractionDetails>>> GetInteratctionDetailsByContactID(int id)
+        {
+            var objInteraction = await _dbContext.tblInteractionDetails.Where(x => x.ContactDetailsID == id).ToListAsync();
+
+            if (objInteraction == null)
+            {
+                return  NotFound();
+            }
+            return Ok(objInteraction);
+
+           
+
+        }
+
     }
 }

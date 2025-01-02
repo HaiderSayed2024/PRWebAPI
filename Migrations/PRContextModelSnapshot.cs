@@ -51,21 +51,21 @@ namespace PRWebAPI.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "1ab0bf34-2901-4efb-9836-2e76cb4dcf2a",
+                            Id = "57708ae5-7785-4ada-9546-edfa58f8f6f2",
                             ConcurrencyStamp = "1",
                             Name = "Admin",
                             NormalizedName = "Admin"
                         },
                         new
                         {
-                            Id = "f9dfa0c7-3b3f-4f24-81cf-074348325e9f",
+                            Id = "7df74360-e21d-4591-8d0f-82b9fe348c9e",
                             ConcurrencyStamp = "1",
                             Name = "Admin",
                             NormalizedName = "User"
                         },
                         new
                         {
-                            Id = "e9f15bdc-b223-402b-adac-f077cb76bcc8",
+                            Id = "8bea4e5e-14cf-451e-a69b-474c1555fc07",
                             ConcurrencyStamp = "1",
                             Name = "Admin",
                             NormalizedName = "HR"
@@ -252,11 +252,9 @@ namespace PRWebAPI.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ContactDetailsID"));
 
                     b.Property<string>("Address")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ContactAddedBy")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ContactOwnership")
@@ -269,7 +267,6 @@ namespace PRWebAPI.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("IsAIM")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("ModifiedDate")
@@ -280,15 +277,12 @@ namespace PRWebAPI.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Phone")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Priority")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Relation")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Status")
@@ -308,7 +302,6 @@ namespace PRWebAPI.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
                     b.Property<string>("Comment")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("ContactDetailsID")
@@ -321,7 +314,6 @@ namespace PRWebAPI.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Reason")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
