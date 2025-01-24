@@ -24,7 +24,7 @@ namespace PRWebAPI.Controllers
             _dbContext = dbContext;
         }
 
-
+        [Authorize]
         [HttpGet("GetInteratctionDetails")]
         public async Task<ActionResult<IEnumerable<InteractionDetails>>> GetInteratctionDetails()
         {
@@ -47,7 +47,7 @@ namespace PRWebAPI.Controllers
             return Ok(objInteraction);
         }
 
-
+        [Authorize]
         [HttpPost("PostInteratctionDetails")]
         public async Task<ActionResult<ContactDTO>> PostInteratctionDetailsDetails(InteractionDTO objInteraction)
         {
@@ -106,7 +106,7 @@ namespace PRWebAPI.Controllers
             return Ok(objInteraction);
         }
 
-
+        [Authorize]
         [HttpGet("GetInteratctionDetailsByContactID")]
         public async Task<ActionResult<IEnumerable<InteractionDetails>>> GetInteratctionDetailsByContactID(int id)
         {

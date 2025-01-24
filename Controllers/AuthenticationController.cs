@@ -34,7 +34,7 @@ namespace PRWebAPI.Controllers
             _dbContext = dbContext;
         }
 
-
+        [NonAction]
         [HttpPost("Register")]
         public async Task<IActionResult> Register([FromBody] Register registerUser, string role)
         {
@@ -128,7 +128,7 @@ namespace PRWebAPI.Controllers
             {
                 Mailrequest mailrequest = new Mailrequest();
                 //userEmail
-                mailrequest.ToEmail = "myselfhaider2022@gmail.com";
+                mailrequest.ToEmail = userEmail;
                 mailrequest.Subject = $"Welcome to Raabta Application -  {subject} ";
                 // mailrequest.Body = "Thanks for Joining Us";
                 mailrequest.Body = link;

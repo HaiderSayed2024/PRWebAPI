@@ -11,6 +11,9 @@ D:\PR\PRWebAPI\PRWebAPI\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
 D:\PR\PRWebAPI\PRWebAPI\bin\Debug\net8.0\Humanizer.dll
 D:\PR\PRWebAPI\PRWebAPI\bin\Debug\net8.0\MailKit.dll
 D:\PR\PRWebAPI\PRWebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\PR\PRWebAPI\PRWebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\PR\PRWebAPI\PRWebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\PR\PRWebAPI\PRWebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 D:\PR\PRWebAPI\PRWebAPI\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 D:\PR\PRWebAPI\PRWebAPI\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
 D:\PR\PRWebAPI\PRWebAPI\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
@@ -26,6 +29,8 @@ D:\PR\PRWebAPI\PRWebAPI\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
 D:\PR\PRWebAPI\PRWebAPI\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
 D:\PR\PRWebAPI\PRWebAPI\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 D:\PR\PRWebAPI\PRWebAPI\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+D:\PR\PRWebAPI\PRWebAPI\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+D:\PR\PRWebAPI\PRWebAPI\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
 D:\PR\PRWebAPI\PRWebAPI\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
 D:\PR\PRWebAPI\PRWebAPI\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
 D:\PR\PRWebAPI\PRWebAPI\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
@@ -42,6 +47,7 @@ D:\PR\PRWebAPI\PRWebAPI\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
 D:\PR\PRWebAPI\PRWebAPI\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
 D:\PR\PRWebAPI\PRWebAPI\bin\Debug\net8.0\MimeKit.dll
 D:\PR\PRWebAPI\PRWebAPI\bin\Debug\net8.0\Mono.TextTemplating.dll
+D:\PR\PRWebAPI\PRWebAPI\bin\Debug\net8.0\NETCore.MailKit.dll
 D:\PR\PRWebAPI\PRWebAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 D:\PR\PRWebAPI\PRWebAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\PR\PRWebAPI\PRWebAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -130,6 +136,7 @@ D:\PR\PRWebAPI\PRWebAPI\obj\Debug\net8.0\PRWebAPI.AssemblyInfo.cs
 D:\PR\PRWebAPI\PRWebAPI\obj\Debug\net8.0\PRWebAPI.csproj.CoreCompileInputs.cache
 D:\PR\PRWebAPI\PRWebAPI\obj\Debug\net8.0\PRWebAPI.MvcApplicationPartsAssemblyInfo.cs
 D:\PR\PRWebAPI\PRWebAPI\obj\Debug\net8.0\PRWebAPI.MvcApplicationPartsAssemblyInfo.cache
+D:\PR\PRWebAPI\PRWebAPI\obj\Debug\net8.0\PRWebAPI.sourcelink.json
 D:\PR\PRWebAPI\PRWebAPI\obj\Debug\net8.0\staticwebassets.build.json
 D:\PR\PRWebAPI\PRWebAPI\obj\Debug\net8.0\staticwebassets.development.json
 D:\PR\PRWebAPI\PRWebAPI\obj\Debug\net8.0\staticwebassets\msbuild.PRWebAPI.Microsoft.AspNetCore.StaticWebAssets.props
@@ -144,10 +151,3 @@ D:\PR\PRWebAPI\PRWebAPI\obj\Debug\net8.0\refint\PRWebAPI.dll
 D:\PR\PRWebAPI\PRWebAPI\obj\Debug\net8.0\PRWebAPI.pdb
 D:\PR\PRWebAPI\PRWebAPI\obj\Debug\net8.0\PRWebAPI.genruntimeconfig.cache
 D:\PR\PRWebAPI\PRWebAPI\obj\Debug\net8.0\ref\PRWebAPI.dll
-D:\PR\PRWebAPI\PRWebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
-D:\PR\PRWebAPI\PRWebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
-D:\PR\PRWebAPI\PRWebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-D:\PR\PRWebAPI\PRWebAPI\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
-D:\PR\PRWebAPI\PRWebAPI\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
-D:\PR\PRWebAPI\PRWebAPI\bin\Debug\net8.0\NETCore.MailKit.dll
-D:\PR\PRWebAPI\PRWebAPI\obj\Debug\net8.0\PRWebAPI.sourcelink.json

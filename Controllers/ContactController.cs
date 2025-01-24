@@ -26,6 +26,7 @@ namespace PRWebAPI.Controllers
             _dbContext = dbContext;           
         }
 
+        [Authorize]
         [HttpGet("GetContactDetails")]       
         public async Task<ActionResult<IEnumerable<ContactDetails>>> GetContactDetails ()
         {
@@ -51,7 +52,7 @@ namespace PRWebAPI.Controllers
             }
         }
 
-
+        [Authorize]
         [HttpPost("PostContactDetails")]
         public async Task<ActionResult<ContactDTO>> PostContactDetails(ContactDTO objContact)
         {
