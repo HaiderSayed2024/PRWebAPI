@@ -54,6 +54,27 @@
   },
   {
     "ContainingType": "PRWebAPI.Controllers.AuthenticationController",
+    "Method": "Register",
+    "RelativePath": "api/Authentication/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registerUser",
+        "Type": "PRWebAPI.Models.Authentication.SignUp.Register",
+        "IsRequired": true
+      },
+      {
+        "Name": "role",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PRWebAPI.Controllers.AuthenticationController",
     "Method": "ResetPassword",
     "RelativePath": "api/Authentication/ResetPassword",
     "HttpMethod": "GET",

@@ -33,8 +33,7 @@ namespace PRWebAPI.Controllers
             _emailService = emailService;
             _dbContext = dbContext;
         }
-
-        [NonAction]
+       
         [HttpPost("Register")]
         public async Task<IActionResult> Register([FromBody] Register registerUser, string role)
         {
