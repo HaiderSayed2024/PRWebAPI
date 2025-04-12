@@ -10,13 +10,14 @@ using Microsoft.AspNetCore.Mvc;
 using PRWebAPI.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
-
+using Microsoft.AspNetCore.Cors;
 
 namespace PRWebAPI.Controllers
 {
 
     [Route("api/[controller]")]
     [ApiController]
+
     public class ContactController : ControllerBase
     {      
         private readonly PRContext _dbContext;
@@ -38,7 +39,7 @@ namespace PRWebAPI.Controllers
         }
 
         [Authorize]
-        [HttpGet("GetContactDetailsById{id}")]
+        [HttpGet("GetContactDetailsById/{id}")]
         public ActionResult<ContactDetails> GetContactDetailsById(int id)
         {
             var objContact = _dbContext.tblContactDetails.FirstOrDefault(x => x.ContactDetailsID == id);

@@ -99,6 +99,8 @@ builder.Services.AddCors(options =>
         policy.AllowAnyOrigin()
         .AllowAnyHeader()
         .AllowAnyMethod();
+
+
     });
 });
 
@@ -117,10 +119,11 @@ if (app.Environment.IsDevelopment())
 app.UseSwagger();
 app.UseSwaggerUI();
 
-app.UseAuthentication();
+app.UseRouting();
 
 app.UseCors(MyAllowSpecificOrigins);
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

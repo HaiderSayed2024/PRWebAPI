@@ -9,12 +9,14 @@ using Microsoft.Data.SqlClient;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 
 namespace PRWebAPI.Controllers
 {
   //  [Authorize(Roles = "Admin")]
     [Route("api/[controller]")]
     [ApiController]
+   
     public class InteratctionController : ControllerBase
     {
         private readonly PRContext _dbContext;
@@ -36,7 +38,7 @@ namespace PRWebAPI.Controllers
         }
 
         [Authorize]
-        [HttpGet("GetInteratctionDetailsByID")]
+        [HttpGet("GetInteratctionDetailsByID/{id}")]
         public ActionResult<InteractionDetails> GetInteratctionDetailsByID(int id)
         {
             var objInteraction = _dbContext.tblInteractionDetails.FirstOrDefault(x => x.ID == id);
@@ -88,8 +90,8 @@ namespace PRWebAPI.Controllers
 
         }
 
-        [Authorize]
-        [HttpDelete("DeleteInteratctionDetails")]
+       
+        [HttpDelete("DeleteInteratctionDetails/{id}")]
         public async Task<ActionResult> DeleteInteratctionDetails(int id)
         {
             if (_dbContext.tblInteractionDetails == null)

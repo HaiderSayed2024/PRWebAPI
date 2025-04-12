@@ -222,7 +222,7 @@
   {
     "ContainingType": "PRWebAPI.Controllers.InteratctionController",
     "Method": "DeleteInteratctionDetails",
-    "RelativePath": "api/Interatction/DeleteInteratctionDetails",
+    "RelativePath": "api/Interatction/DeleteInteratctionDetails/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -230,7 +230,7 @@
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
