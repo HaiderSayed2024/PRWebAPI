@@ -94,18 +94,25 @@ var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy(name: MyAllowSpecificOrigins, policy =>
+    //options.AddPolicy(name: MyAllowSpecificOrigins, policy =>
+    //{
+    //    policy.WithOrigins("http://localhost:3000", "http://localhost:3001", "https://almsoftware.in")
+    //    .WithMethods("GET", "POST", "PUT", "DELETE")
+    //    .AllowAnyHeader();
+
+    //});
+
+    options.AddDefaultPolicy(policy =>
     {
         policy.AllowAnyOrigin()
-        .AllowAnyHeader()
-        .AllowAnyMethod();
-
-
+              .AllowAnyHeader()
+              .AllowAnyMethod(); // Includes OPTIONS, DELETE, etc.
     });
 });
 
 
 var app = builder.Build();
+
 
 
 
@@ -116,12 +123,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseSwagger();
-app.UseSwaggerUI();
-
+//app.UseSwagger();
+//app.UseSwaggerUI();
 app.UseRouting();
 
-app.UseCors(MyAllowSpecificOrigins);
+app.UseCors();
 
 app.UseAuthentication();
 app.UseAuthorization();

@@ -39,7 +39,7 @@ namespace PRWebAPI.Controllers
         }
 
         [Authorize]
-        [HttpGet("GetContactDetailsById/{id}")]
+        [HttpGet("GetContactDetailsById{id}")]
         public ActionResult<ContactDetails> GetContactDetailsById(int id)
         {
             var objContact = _dbContext.tblContactDetails.FirstOrDefault(x => x.ContactDetailsID == id);

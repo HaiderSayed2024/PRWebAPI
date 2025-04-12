@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PRWebAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bc05f4f62859501d09d13b47231c0182177398b5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8abc4253d4a64c9877a70a6f436a4469362e8499")]
 [assembly: System.Reflection.AssemblyProductAttribute("PRWebAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PRWebAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

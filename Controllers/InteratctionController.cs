@@ -16,7 +16,7 @@ namespace PRWebAPI.Controllers
   //  [Authorize(Roles = "Admin")]
     [Route("api/[controller]")]
     [ApiController]
-   
+    
     public class InteratctionController : ControllerBase
     {
         private readonly PRContext _dbContext;
@@ -38,7 +38,7 @@ namespace PRWebAPI.Controllers
         }
 
         [Authorize]
-        [HttpGet("GetInteratctionDetailsByID/{id}")]
+        [HttpGet("GetInteratctionDetailsByID")]
         public ActionResult<InteractionDetails> GetInteratctionDetailsByID(int id)
         {
             var objInteraction = _dbContext.tblInteractionDetails.FirstOrDefault(x => x.ID == id);
@@ -90,7 +90,7 @@ namespace PRWebAPI.Controllers
 
         }
 
-       
+        [Authorize]
         [HttpDelete("DeleteInteratctionDetails")]
         public async Task<ActionResult> DeleteInteratctionDetails(int id)
         {
