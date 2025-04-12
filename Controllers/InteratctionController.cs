@@ -91,7 +91,7 @@ namespace PRWebAPI.Controllers
         }
 
        
-        [HttpDelete("DeleteInteratctionDetails/{id}")]
+        [HttpDelete("DeleteInteratctionDetails")]
         public async Task<ActionResult> DeleteInteratctionDetails(int id)
         {
             if (_dbContext.tblInteractionDetails == null)
