@@ -220,9 +220,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "PRWebAPI.Controllers.InteratctionController",
+    "ContainingType": "PRWebAPI.Controllers.InteractionController",
     "Method": "DeleteInteratctionDetails",
-    "RelativePath": "api/Interatction/DeleteInteratctionDetails/{id}",
+    "RelativePath": "api/Interaction/DeleteInteractionDetails",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -230,15 +230,15 @@
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": true
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "PRWebAPI.Controllers.InteratctionController",
+    "ContainingType": "PRWebAPI.Controllers.InteractionController",
     "Method": "GetInteratctionDetails",
-    "RelativePath": "api/Interatction/GetInteratctionDetails",
+    "RelativePath": "api/Interaction/GetInteractionDetails",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -256,9 +256,9 @@
     ]
   },
   {
-    "ContainingType": "PRWebAPI.Controllers.InteratctionController",
+    "ContainingType": "PRWebAPI.Controllers.InteractionController",
     "Method": "GetInteratctionDetailsByContactID",
-    "RelativePath": "api/Interatction/GetInteratctionDetailsByContactID",
+    "RelativePath": "api/Interaction/GetInteractionDetailsByContactID",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -282,9 +282,9 @@
     ]
   },
   {
-    "ContainingType": "PRWebAPI.Controllers.InteratctionController",
+    "ContainingType": "PRWebAPI.Controllers.InteractionController",
     "Method": "GetInteratctionDetailsByID",
-    "RelativePath": "api/Interatction/GetInteratctionDetailsByID",
+    "RelativePath": "api/Interaction/GetInteractionDetailsByID",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -308,9 +308,9 @@
     ]
   },
   {
-    "ContainingType": "PRWebAPI.Controllers.InteratctionController",
+    "ContainingType": "PRWebAPI.Controllers.InteractionController",
     "Method": "PostInteratctionDetailsDetails",
-    "RelativePath": "api/Interatction/PostInteratctionDetails",
+    "RelativePath": "api/Interaction/PostInteractionDetails",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -334,9 +334,9 @@
     ]
   },
   {
-    "ContainingType": "PRWebAPI.Controllers.InteratctionController",
+    "ContainingType": "PRWebAPI.Controllers.InteractionController",
     "Method": "PutInteratctionDetails",
-    "RelativePath": "api/Interatction/PutInteratctionDetails",
+    "RelativePath": "api/Interaction/PutInteractionDetails",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,

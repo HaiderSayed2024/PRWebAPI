@@ -17,17 +17,17 @@ namespace PRWebAPI.Controllers
     [Route("api/[controller]")]
     [ApiController]
     
-    public class InteratctionController : ControllerBase
+    public class InteractionController : ControllerBase
     {
         private readonly PRContext _dbContext;
 
-        public InteratctionController(PRContext dbContext)
+        public InteractionController(PRContext dbContext)
         {
             _dbContext = dbContext;
         }
 
         [Authorize]
-        [HttpGet("GetInteratctionDetails")]
+        [HttpGet("GetInteractionDetails")]
         public async Task<ActionResult<IEnumerable<InteractionDetails>>> GetInteratctionDetails()
         {
             if (_dbContext.tblInteractionDetails == null)
@@ -38,7 +38,7 @@ namespace PRWebAPI.Controllers
         }
 
         [Authorize]
-        [HttpGet("GetInteratctionDetailsByID")]
+        [HttpGet("GetInteractionDetailsByID")]
         public ActionResult<InteractionDetails> GetInteratctionDetailsByID(int id)
         {
             var objInteraction = _dbContext.tblInteractionDetails.FirstOrDefault(x => x.ID == id);
@@ -50,7 +50,7 @@ namespace PRWebAPI.Controllers
         }
 
         [Authorize]
-        [HttpPost("PostInteratctionDetails")]
+        [HttpPost("PostInteractionDetails")]
         public async Task<ActionResult<ContactDTO>> PostInteratctionDetailsDetails(InteractionDTO objInteraction)
         {
             if (!ModelState.IsValid)
@@ -70,7 +70,7 @@ namespace PRWebAPI.Controllers
         }
 
         [Authorize]
-        [HttpPut("PutInteratctionDetails")]
+        [HttpPut("PutInteractionDetails")]
         public async Task<ActionResult> PutInteratctionDetails(int id, InteractionDetails objInteraction)
         {
             if (id != objInteraction.ID)
@@ -91,7 +91,7 @@ namespace PRWebAPI.Controllers
         }
 
         [Authorize]
-        [HttpDelete("DeleteInteratctionDetails")]
+        [HttpDelete("DeleteInteractionDetails")]
         public async Task<ActionResult> DeleteInteratctionDetails(int id)
         {
             if (_dbContext.tblInteractionDetails == null)
@@ -109,7 +109,7 @@ namespace PRWebAPI.Controllers
         }
 
         [Authorize]
-        [HttpGet("GetInteratctionDetailsByContactID")]
+        [HttpGet("GetInteractionDetailsByContactID")]
         public async Task<ActionResult<IEnumerable<InteractionDetails>>> GetInteratctionDetailsByContactID(int id)
         {
             var objInteraction = await _dbContext.tblInteractionDetails.Where(x => x.ContactDetailsID == id).ToListAsync();
